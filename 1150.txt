@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        int X = int.Parse(Console.ReadLine()); 
+        int Z;
+
+        
+        do
+        {
+            Z = int.Parse(Console.ReadLine());
+        } while (Z <= X);
+
+        int sum = 0, count = 0, current = X;
+
+        
+        while (sum <= Z)
+        {
+            sum += current;
+            current++;
+            count++;
+        }
+
+        Console.WriteLine(count);
+    }
+}

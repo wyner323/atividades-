@@ -1,0 +1,39 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        while (true)
+        {
+            string[] input = Console.ReadLine().Split();
+            int M = int.Parse(input[0]);
+            int N = int.Parse(input[1]);
+
+            
+            if (M <= 0 || N <= 0)
+                break;
+
+            
+            if (M > N)
+            {
+                int temp = M;
+                M = N;
+                N = temp;
+            }
+
+            int sum = 0;
+            string sequence = "";
+
+            
+            for (int i = M; i <= N; i++)
+            {
+                sequence += i + " ";
+                sum += i;
+            }
+
+           
+            Console.WriteLine($"{sequence}Sum={sum}");
+        }
+    }
+}

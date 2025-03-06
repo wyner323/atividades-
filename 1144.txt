@@ -1,0 +1,29 @@
+﻿using System;
+
+class Program
+{
+    static void Main()
+    {
+        int N = int.Parse(Console.ReadLine());
+
+        if (N <= 1 || N >= 1000)
+        {
+            Console.WriteLine("N deve estar entre 1 e 1000.");
+            return;
+        }
+
+        for (int i = 1; i <= N; i++)
+        {
+            for (int j = 1; j <= 2; j++)
+            {
+                int primeiroNumero = i;
+                int quadrado = primeiroNumero * primeiroNumero;
+
+                int segundoNumero = primeiroNumero + j;
+                int cubo = segundoNumero * segundoNumero * segundoNumero;
+
+                Console.WriteLine($"{primeiroNumero} {quadrado} {cubo}");
+            }
+        }
+    }
+}

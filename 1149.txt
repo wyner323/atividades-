@@ -1,0 +1,20 @@
+using System;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        int[] input = Console.ReadLine().Split().Select(int.Parse).ToArray();
+        int A = input[0]; 
+        int N = input.Skip(1).First(x => x > 0); 
+
+        int sum = 0;
+        for (int i = 0; i < N; i++)
+        {
+            sum += A + i;
+        }
+
+        Console.WriteLine(sum);
+    }
+}

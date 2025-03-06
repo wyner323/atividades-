@@ -1,0 +1,24 @@
+using System;
+
+class Programa
+{
+    static void Main()
+    {
+        int N = int.Parse(Console.ReadLine());
+
+        if (N <= 0 || N >= 13)
+        {
+            Console.WriteLine("N deve estar entre 1 e 12.");
+            return;
+        }
+
+        int fatorial = 1;
+
+        for (int i = N; i > 0; i--)
+        {
+            fatorial *= i;
+        }
+
+        Console.WriteLine(fatorial);
+    }
+}

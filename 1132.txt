@@ -1,0 +1,42 @@
+﻿namespace _1132
+{
+    using System;
+
+    class Program
+    {
+        static void Main()
+        {
+            string[] input = Console.ReadLine().Split();
+
+            if (input.Length != 2)
+            {
+                Console.WriteLine("Por favor, insira exatamente dois números inteiros.");
+                return;
+            }
+
+            int X, Y;
+
+            if (!int.TryParse(input[0], out X) || !int.TryParse(input[1], out Y))
+            {
+                Console.WriteLine("Entrada inválida. Por favor, insira números inteiros válidos.");
+                return;
+            }
+
+            int inicio = Math.Min(X, Y);
+            int fim = Math.Max(X, Y);
+            int soma = 0;
+
+            for (int i = inicio; i <= fim; i++)
+            {
+                if (i % 13 != 0)
+                {
+                    soma += i;
+                }
+            }
+
+            Console.WriteLine(soma);
+        }
+    }
+}
+
+
